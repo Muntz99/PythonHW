@@ -22,22 +22,6 @@ with open(csvpath) as file:
         Votes.append(row[0])
         Total_Votes = len(Votes)
         Candidates.append(row[2])
-        # Total_Votes = Total_Votes + 1
-
-    #     if row[2] not in Candidates:
-    #         Candidates.append(row[2])
-    #         Votes.append(0)
-    #     Index = Candidates.index(row[2])
-    #     Votes[Index] = Votes[Index] + 1
-        
-    # print(Total_Votes)
-      
-    # for i in Candidates:
-    #     J = Candidates.index(i)
-    #     #print(f"{Candidates[J]}: " "{:.2%}".format(Votes[J]/Total_Votes), (str(Votes[J])))
-        
-    #     voter_output = f"{Candidates[J]}: " "{:.2%}".format(Votes[J]/Total_Votes), (str(Votes[J])))
-    #     print(voter_output)
 
     for candidate in Candidates:
             if candidate == "Khan":
@@ -61,10 +45,6 @@ with open(csvpath) as file:
     Correy_Average = round(((Correy_Votes / Total_Votes)*100), 2)
     Li_Average = round(((Li_Votes / Total_Votes)*100), 2)
     OTooley_Average = round(((OTooley_Votes / Total_Votes)*100), 2)
-
-        # print(J)
-        # voter_output = 
-        # print(voter_output, end="")
     
 
     Winner = Candidates[(Votes.index(max(Votes)))]
@@ -88,3 +68,20 @@ with open(csvpath) as file:
 with open(output_path, "w") as txt_file:
     txt_file.write(output)
     
+#alternate trys
+        # Total_Votes = Total_Votes + 1
+
+    #     if row[2] not in Candidates:
+    #         Candidates.append(row[2])
+    #         Votes.append(0)
+    #     Index = Candidates.index(row[2])
+    #     Votes[Index] = Votes[Index] + 1
+        
+    # print(Total_Votes)
+      
+    # for i in Candidates:
+    #     J = Candidates.index(i)
+    #     #print(f"{Candidates[J]}: " "{:.2%}".format(Votes[J]/Total_Votes), (str(Votes[J])))
+        
+    #     voter_output = f"{Candidates[J]}: " "{:.2%}".format(Votes[J]/Total_Votes), (str(Votes[J])))
+    #     print(voter_output)
